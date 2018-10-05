@@ -200,7 +200,7 @@ echo "*** LND ***"
 #
 # get LND resources
 #cd /home/admin/download
-#sudo -u admin wget https://github.com/lightningnetwork/lnd/releases/download/v${lndVersion}/lnd-linux-arm-v${lndVersion}.tar.gz
+#sudo -u admin wget https://github.com/lightningnetwork/lnd/releases/download/v${lndVersion}/lnd-linux-armv7-v${lndVersion}.tar.gz
 #sudo -u admin wget https://github.com/lightningnetwork/lnd/releases/download/v${lndVersion}/manifest-v${lndVersion}.txt
 #sudo -u admin wget https://github.com/lightningnetwork/lnd/releases/download/v${lndVersion}/manifest-v${lndVersion}.txt.sig
 #sudo -u admin wget https://keybase.io/roasbeef/pgp_keys.asc
@@ -231,8 +231,8 @@ echo "*** LND ***"
 #    exit 1
 #fi
 ## install
-#sudo -u admin tar -xzf lnd-linux-arm-v${lndVersion}.tar.gz
-#sudo install -m 0755 -o root -g root -t /usr/local/bin lnd-linux-arm-v${lndVersion}/*
+#sudo -u admin tar -xzf lnd-linux-armv7-v${lndVersion}.tar.gz
+#sudo install -m 0755 -o root -g root -t /usr/local/bin lnd-linux-armv7-v${lndVersion}/*
 #sleep 3
 #installed=$(sudo -u admin lnd --version | grep "${lndVersion}" -c)
 #if [ ${installed} -lt 1 ]; then
@@ -244,7 +244,7 @@ echo "*** LND ***"
 ##### Build from Source
 # To quickly catch up get latest patches if needed
 repo="github.com/lightningnetwork/lnd"
-commit="25145acc46cc5d18e4e348eed097300b1391d2a7"
+commit="a1f549754b61c1ba84466f0226997687127f7fc0"
 # BUILDING LND FROM SOURCE
 echo "*** Installing Go ***"
 wget https://storage.googleapis.com/golang/go1.10.linux-armv6l.tar.gz
